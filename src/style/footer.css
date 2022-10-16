@@ -1,0 +1,89 @@
+@media screen and (min-width: 1px) and (max-width: 479px) {
+  .footer {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #292d30 !important;
+    margin-top: 1rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .footer > .info {
+    padding-top: 1rem;
+    flex-flow: row wrap;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    display: flex;
+    align-self: flex-start;
+    margin-left: 1.5rem;
+  }
+
+  .footer > .info > div {
+    color: white;
+    flex: 1 1 100%;
+    text-align: center;
+    max-width: 50%;
+    font-size: 32px;
+    line-height: 1.25;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: left;
+    place-content: stretch flex-start;
+    align-items: stretch;
+  }
+
+  .container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .footer > .info > div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer > .info > div > span {
+    color: #35b7bd;
+    font-size: 14px;
+  }
+
+  .footer > .copy-right {
+    margin-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    color: white;
+  }
+
+  .footer > .contacts {
+    display: flex;
+    flex-flow: column wrap;
+  }
+
+  .footer > .contacts > .socials {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 0.45rem;
+    margin-button: 1rem;
+  }
+
+  .footer > .contacts > .socials > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #c6c8c9;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    z-index: 2;
+  }
+}
