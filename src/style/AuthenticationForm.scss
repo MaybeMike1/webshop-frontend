@@ -1,0 +1,19 @@
+.authForm{
+    flex-direction: column;
+    justify-content: center;
+    min-height: 56vh;
+    max-height: 100%;
+
+
+    .errors{
+        transition: all 1s ease;
+
+        *{
+            transition:  all 1s ease;
+        }
+    }
+}
+
+.center{
+    text-align: center;
+}

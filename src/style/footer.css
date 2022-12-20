@@ -1,3 +1,6 @@
+@include breakpoint(large) {
+
+}
 @media screen and (min-width: 1px) and (max-width: 479px) {
   .footer {
     height: auto;
@@ -6,7 +9,6 @@
     justify-content: center;
     align-items: center;
     background: #292d30 !important;
-    margin-top: 1rem;
     padding-bottom: 0.5rem;
   }
 

@@ -13,15 +13,34 @@ import {
 } from '@mui/material'
 import './../style/landingPage.css'
 import NavigateNextIcon from '@mui/icons-material/NavigateNext'
-import React from 'react'
+import { Slider } from '../components/SliderComponent'
+import React, { useEffect } from 'react'
+import GetMember from './../hooks/getUser'
+import { ProductList } from '../components/ListComponent'
+import { productService } from '../Services/productSerivce'
+import { ProductDto } from '../@interface/ProductDto'
 
-export const LandingPage = () => {
+export const LandingPage: React.FC<{}> = () => {
+  const [products, setProducts] = React.useState<ProductDto[]>([])
+  
+  
+  async function getProductsFromDb() {
+    productService.getAll().then((data) => {
+      setProducts(data)
+    })
+  }
+
+
+  useEffect(() => {
+    getProductsFromDb()
+  },[])
   return (
     <Container
       style={{ background: 'white' }}
       className="main-content"
       fixed
       maxWidth="sm"
+      sx={{ marginTop: '40px' }}
     >
       <Typography variant="h5" fontWeight={'785'} textTransform={'uppercase'}>
         Popular Categories
@@ -65,6 +84,26 @@ export const LandingPage = () => {
           </IconButton>
         </div>
       </div>
+      <Typography variant="h5" fontWeight={'785'} textTransform={'uppercase'}>
+        Bestsellers - {new Date().getFullYear()}
+      </Typography>
+      <Slider
+        images={[
+          {
+            imgPath:
+              'https://p.turbosquid.com/ts-thumb/2J/MEd44X/1FCI98lE/dummy_1/jpg/1362252809/1920x1080/fit_q99/b1e967b3f9b9aa9c19b044dcbf9cc88c27cb1ea9/dummy_1.jpg',
+            id: 1,
+            label: 'First',
+          },
+          {
+            imgPath:
+              'https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+            id: 2,
+            label: 'test',
+          },
+        ]}
+      />
+
       <Typography
         sx={{ mb: 1 }}
         variant="h5"
@@ -75,32 +114,19 @@ export const LandingPage = () => {
       </Typography>
       <Divider />
       <div className="searches">
-        <Grow
-          in
-          timeout={1000}
-        >
+        <Grow in timeout={1000}>
           <div className="search-item">Prestige vinskabe</div>
         </Grow>
-        <Grow
-          in
-          timeout={1250}
-        >
+        <Grow in timeout={1250}>
           <div className="search-item">Prestige vinskabe</div>
         </Grow>
-        <Grow
-          in
-          timeout={1500}
-        >
+        <Grow in timeout={1500}>
           <div className="search-item">Prestige vinskabe</div>
         </Grow>
-        <Grow
-          in
-          timeout={1000}
-        >
+        <Grow in timeout={1000}>
           <div className="search-item">Prestige vinskabe</div>
         </Grow>
 
-        
         <div className="search-item">Kaffemaskiner</div>
         <div className="search-item">MacBook</div>
         <div className="search-item">iPhone 13</div>
@@ -114,6 +140,9 @@ export const LandingPage = () => {
         Most popular products
       </Typography>
       <Divider />
+      <ProductList
+        products={products}
+      ></ProductList>
       {/* <div className="card-container">
         <Slide direction="up" timeout={200} in mountOnEnter unmountOnExit>
           <Card

@@ -1,0 +1,21 @@
+.slider-container {
+  min-height: 31vh;
+  margin: 10px 0 10px 0;
+}
+.item-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.slider-image {
+  width: 300px;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.link{
+    text-decoration: none;
+}

@@ -1,0 +1,21 @@
+.main-content {
+  .card {
+    .card-content {
+      .profile-information {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  .button-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 20px;
+    margin-top: 20px;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+}

@@ -4,11 +4,17 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 
 
-import './../style/footer.css'
+import './../style/footer.scss'
+import { Container } from '@mui/material';
+
 interface FooterComponentProps {}
 const Footer: React.FC<FooterComponentProps> = () => {
+  function getCurrentYear() {
+    return new Date().getFullYear();
+  }
   return (
-    <div className="footer">
+    
+    <Container maxWidth="md" className="footer">
       <div className="info">
         <div>
           30
@@ -36,10 +42,9 @@ const Footer: React.FC<FooterComponentProps> = () => {
         </div>
       </div>
       <div className="copy-right">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
+        {getCurrentYear()} © All rights reserved
       </div>
-    </div>
+    </Container>
   )
 }
 

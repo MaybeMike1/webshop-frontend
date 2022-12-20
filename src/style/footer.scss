@@ -1,0 +1,111 @@
+@import './mixins';
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.footer {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #292d30 !important;
+  padding-bottom: 0.5rem;
+
+  @include breakpoint('medium') {
+    max-width: 700px;
+  }
+
+  .copy-right {
+    margin-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    color: white;
+  }
+  .info {
+    padding-top: 1rem;
+    flex-flow: row wrap;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    display: flex;
+    align-self: flex-start;
+    margin-left: 1.5rem;
+    @include breakpoint('medium') {
+      flex-flow: row wrap;
+      margin-left: 0px;
+      margin: 0;
+    }
+
+    div {
+      @include breakpoint('medium') {
+        margin-left: 0px;
+      }
+      color: white;
+      flex: 1 1 100%;
+      text-align: center;
+      max-width: 50%;
+      font-size: 32px;
+      line-height: 1.25;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: left;
+      place-content: stretch flex-start;
+      align-items: stretch;
+      display: flex;
+      flex-direction: column;
+
+      @include breakpoint('medium') {
+        display: flex;
+        align-items: flex-end;
+        flex-flow: column nowrap;
+        width: auto;
+        gap: 0.25rem;
+      }
+
+      span {
+        @include breakpoint('medium') {
+          font-size: 2.5vw;
+        }
+        color: #35b7bd;
+        font-size: 14px;
+      }
+    }
+  }
+  .contacts {
+    display: flex;
+    flex-flow: column wrap;
+
+    .socials {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      @include breakpoint('medium') {
+        gap: 1.5rem;
+      }
+      gap: 0.75rem;
+      margin: 1rem 0 1rem 0;
+
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #c6c8c9;
+        gap: 10px;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
