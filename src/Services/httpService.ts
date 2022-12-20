@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-axios.defaults.baseURL = 'https://webstore-backend.onrender.com/';
+axios.defaults.baseURL = 'https://webstore-backend.onrender.com/api';
 axios.defaults.headers.post['Content-Type'] = 'application/json';
 axios.defaults.headers.common['X-auth-token'] = localStorage.getItem('token') ?? null
 
