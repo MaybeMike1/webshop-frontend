@@ -58,7 +58,7 @@ export const registrationApp: React.FC<RegistrationAppProps> = () => {
     return steps.length
   }
 
-  function handleComponents(steps) {
+  function handleComponents() {
     switch (activeStep) {
       case 1:
         return <ProfileForm />
