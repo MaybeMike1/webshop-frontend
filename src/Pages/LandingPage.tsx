@@ -143,41 +143,6 @@ export const LandingPage: React.FC<{}> = () => {
       <ProductList
         products={products}
       ></ProductList>
-      {/* <div className="card-container">
-        <Slide direction="up" timeout={200} in mountOnEnter unmountOnExit>
-          <Card
-            className="card"
-            sx={{ maxWidth: 345, width: 200, height: 200 }}
-          >
-            <CardHeader title="test"></CardHeader>
-            <CardActionArea>
-              <CardContent></CardContent>
-            </CardActionArea>
-          </Card>
-        </Slide>
-        <Slide direction="up" in mountOnEnter unmountOnExit>
-          <Card
-            className="card"
-            sx={{ maxWidth: 345, width: 200, height: 200 }}
-          >
-            <CardHeader title="test"></CardHeader>
-            <CardActionArea>
-              <CardContent></CardContent>
-            </CardActionArea>
-          </Card>
-        </Slide>
-        <Slide direction="up" in mountOnEnter unmountOnExit>
-          <Card
-            className="card"
-            sx={{ maxWidth: 345, width: 200, height: 200 }}
-          >
-            <CardHeader title="test"></CardHeader>
-            <CardActionArea>
-              <CardContent></CardContent>
-            </CardActionArea>
-          </Card>
-        </Slide>
-      </div> */}
     </Container>
   )
 }
